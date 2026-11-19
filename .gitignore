@@ -1,0 +1,10 @@
+# 构建与本地数据，别进仓库
+*.zip
+dist/
+node_modules/
+dashboard.html
+sync.log
+*.bak
+*.bak-*
+.DS_Store
+Thumbs.db

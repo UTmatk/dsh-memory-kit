@@ -1,0 +1,37 @@
+{
+  "name": "dsh-memory-panel",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "DeepSeek Harness plugin: a visual panel for a local long-term memory (MEMORY.md entries, session archive, tokenized search, one-click archive/render, duplicate detection, cross-platform scheduling). Registers /memory-panel on the host webserver and adds a 记忆 section to Settings.",
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./api": "./api.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "api.js",
+    "schedule.mjs",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}

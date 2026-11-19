@@ -1,0 +1,5 @@
+# 统一用 LF 入库：install.sh / mem.sh 带 CRLF 会在 macOS/Linux 上报 bad interpreter
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.zip binary
